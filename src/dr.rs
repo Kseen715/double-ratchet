@@ -66,7 +66,7 @@ pub type Counter = u32;
 /// initialize both parties.
 ///
 /// ```
-/// # use double_ratchet::{mock, KeyPair, DoubleRatchet, EncryptUninit};
+/// # use ksi_double_ratchet::{mock, KeyPair, DoubleRatchet, EncryptUninit};
 /// # type MyCryptoProvider = mock::CryptoProvider;
 /// # let mut csprng = mock::Rng::default();
 /// # let bobs_keypair = mock::KeyPair::new(&mut csprng);
@@ -95,7 +95,7 @@ pub type Counter = u32;
 /// us with an `extra_shared_secret`.
 ///
 /// ```
-/// # use double_ratchet::{mock, KeyPair, DoubleRatchet};
+/// # use ksi_double_ratchet::{mock, KeyPair, DoubleRatchet};
 /// # type MyCryptoProvider = mock::CryptoProvider;
 /// # let mut csprng = mock::Rng::default();
 /// # let bobs_keypair = mock::KeyPair::new(&mut csprng);
@@ -711,7 +711,7 @@ impl fmt::Display for DecryptError {
 
 // Create a mock CryptoProvider for testing purposes. See `tests/signal.rs` for a proper example
 // implementation.
-#[cfg(feature = "test")]
+// #[cfg(feature = "test")]
 #[allow(unused)]
 #[allow(missing_docs)]
 pub mod mock {
@@ -1127,7 +1127,7 @@ mod tests {
             let (h_a, ct_a) = alice.ratchet_encrypt(b"Hello Bob", ad_a, &mut rng);
             bob.ratchet_decrypt(&h_a, &ct_a, ad_a).unwrap();
             stored += MAX_SKIP;
-            &bob.mkskipped.0.values().map(|hm| hm.len()).sum::<usize>();
+            let _ = &bob.mkskipped.0.values().map(|hm| hm.len()).sum::<usize>();
         }
         alice.ratchet_encrypt(b"Bob can't store this key anymore", ad_a, &mut rng);
         let (h_a, ct_a) = alice.ratchet_encrypt(b"Gotcha, Bob!", ad_a, &mut rng);
