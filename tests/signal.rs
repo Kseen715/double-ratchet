@@ -57,7 +57,7 @@ impl dr::CryptoProvider for SignalCryptoProvider {
         mac.update(&[0x01]);
         let message_key = mac.finalize().into_bytes();
 
-        // TODO: [Kseen] check if this is correct, and we should not recreate the mac
+        // TODO: [Kseen715] check if this is correct, maybe we should not recreate the mac and just somehow clear it
         mac = <Hmac<Sha256> as KeyInit>::new_from_slice(key).unwrap();
         mac.update(&[0x02]);
         let chain_key = mac.finalize().into_bytes();
