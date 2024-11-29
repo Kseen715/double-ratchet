@@ -1,6 +1,6 @@
 [package]
 name = "ksi-double-ratchet"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["D.N. Korenev <https://github.com/Kseen715>, S.R. Verschoor <sebastian@zeroknowledge.me>"]
 edition = "2021"
 description = "Double Ratchet key management for exchanging encrypted messages between two parties."
