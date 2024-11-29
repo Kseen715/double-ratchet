@@ -80,11 +80,10 @@ assert_eq!(
 ## Installation
 
 The Double Ratchet crate is distributed through [crates.io][crates]: install it
-by adding the following to your `Cargo.toml`:
+by running:
 
-```toml
-[dependencies]
-ksi-double-ratchet = "0.1"
+```
+cargo add ksi-double-ratchet
 ```
 
 The `std` feature is enabled by default. If you don't want to use `std`, compile with `--no-default-features`.

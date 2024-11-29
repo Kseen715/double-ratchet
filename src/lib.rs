@@ -15,7 +15,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 --------------------------------------------------------------------------------
 */ 
 
-//!Crate documentation provided in README.md
+#![doc = include_str!("../README.md")]
 
 // TODO: [sebastianv89] include README.md documentation: https://github.com/rust-lang/rust/issues/44732
 // TODO: [sebastianv89] test examples in README.md
