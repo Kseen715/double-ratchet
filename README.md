@@ -1,7 +1,6 @@
 # Double Ratchet
 
-[![](https://img.shields.io/crates/v/ksi-double-ratchet.svg)][crates]
-[![](https://docs.rs/ksi-double-ratchet/badge.svg)][docs]
+
 
 > [!NOTE]
 > This is re-implementation of the original [double-ratchet][origianl-crate] crate. The original crate is not maintained anymore and has some issues. This crate is a drop-in replacement for the original crate and should work with the same API. The main difference is that this crate uses modern versions of the dependencies and has some bug fixes.
@@ -18,12 +17,10 @@ the decryption of messages that arrive out-of-order.
 
 The Double Ratchet itself requires a public key crypto system that can perform
 [Diffie-Hellman][dh] (DH) operations, a secret key crypto system that provides
-[authenticated encryption with associated data][aead] (AEAD) and two [key
-derivation functions][kdf] (KDF). This crate aims to be agnostic towards the
+[authenticated encryption with associated data][aead] (AEAD) and two [key][kdf] (KDF). This crate aims to be agnostic towards the
 implementation of these functions: users of the crate implement the
 `CryptoProvider` trait and the `DoubleRatchet` struct should take care of the
 rest.
-
 
 ## Examples
 
@@ -33,7 +30,7 @@ The following example corresponds to the way the Double Ratchet is used in the
 that Alice and Bob share a secret key `SK` and Alice knows Bob's public
 key.
 
-```rust
+```rust,ignore
 use double_ratchet::{DoubleRatchet};
 use rand_os::RandOs;
 let mut rng = OsRng::new().unwrap();
@@ -76,23 +73,20 @@ assert_eq!(
 );
 ```
 
-
 ## Installation
 
 The Double Ratchet crate is distributed through [crates.io][crates]: install it
 by running:
 
-```
+```ignore
 cargo add ksi-double-ratchet
 ```
 
 The `std` feature is enabled by default. If you don't want to use `std`, compile with `--no-default-features`.
 
-
 ## Documentation
 
 The documentation is available [here][docs].
-
 
 ## Future plans
 
@@ -103,7 +97,6 @@ and am open for suggestions for more features.
 - [ ] generalize the `KeyStore` to allow automatic deletion of very old keys
 - [ ] provide a way for saving/restoring a `DoubleRatchet` to storage
 - [ ] Provide a non-allocating interface for encryption/decryption
-
 
 [aead]: https://en.wikipedia.org/wiki/Authenticated_encryption#Authenticated_encryption_with_associated_data_(AEAD)
 [crates]: https://crates.io/crates/ksi-double-ratchet
