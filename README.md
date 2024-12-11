@@ -1,6 +1,6 @@
 # Double Ratchet
 
-
+![Crates.io Version](https://img.shields.io/crates/v/ksi-double-ratchet) ![Crates.io License](https://img.shields.io/crates/l/ksi-double-ratchet) ![docs.rs](https://img.shields.io/docsrs/ksi-double-ratchet) ![Crates.io Dependents](https://img.shields.io/crates/dependents/ksi-double-ratchet) ![Crates.io Downloads (recent)](https://img.shields.io/crates/dr/ksi-double-ratchet)
 
 > [!NOTE]
 > This is re-implementation of the original [double-ratchet][origianl-crate] crate. The original crate is not maintained anymore and has some issues. This crate is a drop-in replacement for the original crate and should work with the same API. The main difference is that this crate uses modern versions of the dependencies and has some bug fixes.
