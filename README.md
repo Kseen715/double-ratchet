@@ -1,6 +1,10 @@
 # Double Ratchet
 
-![Crates.io Version](https://img.shields.io/crates/v/ksi-double-ratchet) ![Crates.io License](https://img.shields.io/crates/l/ksi-double-ratchet) ![docs.rs](https://img.shields.io/docsrs/ksi-double-ratchet) ![Crates.io Dependents](https://img.shields.io/crates/dependents/ksi-double-ratchet) ![Crates.io Downloads (recent)](https://img.shields.io/crates/dr/ksi-double-ratchet)
+[![Crates.io Version][cargo-version-badge]][cargo-crate] 
+[![Crates.io License][cargo-license-badge]][cargo-license]
+[![docs.rs][cargo-docs-badge]][cargo-docs]
+[![Crates.io Dependents][cargo-dependents-badge]][cargo-dependents]
+[![Crates.io Downloads (recent)][cargo-downloads-badge]][cargo-crate] 
 
 > [!NOTE]
 > This is re-implementation of the original [double-ratchet][origianl-crate] crate. The original crate is not maintained anymore and has some issues. This crate is a drop-in replacement for the original crate and should work with the same API. The main difference is that this crate uses modern versions of the dependencies and has some bug fixes.
@@ -75,7 +79,7 @@ assert_eq!(
 
 ## Installation
 
-The Double Ratchet crate is distributed through [crates.io][crates]: install it
+The Double Ratchet crate is distributed through [crates.io][cargo-crate]: install it
 by running:
 
 ```ignore
@@ -99,10 +103,21 @@ and am open for suggestions for more features.
 - [ ] Provide a non-allocating interface for encryption/decryption
 
 [aead]: https://en.wikipedia.org/wiki/Authenticated_encryption#Authenticated_encryption_with_associated_data_(AEAD)
-[crates]: https://crates.io/crates/ksi-double-ratchet
 [dh]: https://en.wikipedia.org/wiki/Diffie-Hellman_key_exchange
 [docs]: https://docs.rs/ksi-double-ratchet
 [kdf]: https://en.wikipedia.org/wiki/Key_derivation_function
 [signal]: https://signal.org/
 [specs]: https://signal.org/docs/specifications/doubleratchet/
 [origianl-crate]: https://crates.io/crates/double-ratchet
+
+[cargo-crate]: https://crates.io/crates/ksi-double-ratchet
+[cargo-license]: https://github.com/Kseen715/double-ratchet/blob/main/LICENSE
+[cargo-docs]: https://docs.rs/ksi-double-ratchet
+[cargo-dependents]: https://crates.io/crates/ksi-double-ratchet/reverse_dependencies
+
+[cargo-version-badge]: https://img.shields.io/crates/v/ksi-double-ratchet
+[cargo-license-badge]: https://img.shields.io/crates/l/ksi-double-ratchet
+[cargo-docs-badge]: https://img.shields.io/docsrs/ksi-double-ratchet
+[cargo-dependents-badge]: https://img.shields.io/crates/dependents/ksi-double-ratchet
+[cargo-downloads-badge]: https://img.shields.io/crates/dr/ksi-double-ratchet
+
